@@ -1,11 +1,14 @@
 {
     "type": "postgres",
-    "host": "localhost",
+    "host": "instamiligram_db",
     "port": 5432,
     "username": "unicorn_user",
     "password": "my_strong_password",
     "database": "rainbowDatabase",
-    "entities": ["dist/**/*.entity.js"],
-    "synchronize": true,
-    "logging": true
+    "logging": true,
+    "entities": ["dist/**/*.entity{ .ts,.js}"],
+    "synchronize": false,
+    "migrations": ["dist/migrations/*{.ts,.js}"],
+    "migrationsTableName": "migrations_typeorm",
+    "migrationsRun": true
 }
